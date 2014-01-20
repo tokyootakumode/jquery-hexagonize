@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title jQuery Hexagonize
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js')
+    script(src='../dist/jquery.boilerplate.js')
+    style(type="text/css").
+      .wrapper {
+        width: 118px;
+        height: 127px;
+        margin: 5px;
+        display: inline-block;
+      }
+  body
+    - for(var i=0; i<5; ++i)
+      .row
+        - for(var j=0; j<5; ++j)
+          .wrapper
+            .element(
+              data-img-url="http://placekitten.com/300/300"
+              data-img-hover-url="http://placekitten.com/301/301")
+    
+    script(type="text/javascript").
+      $(function() {
+        $(".element").hexagonize({
+          width: 118,
+          height: 118*1.5
+        });
+      });

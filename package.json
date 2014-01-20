@@ -1,0 +1,20 @@
+{
+  "name": "jquery-hexagonize",
+  "title": "jQuery Hexagonize",
+  "description": "make hexagon shape",
+  "author": "pchw",
+  "homepage": "https://github.com/jquery-hexagonize",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-cli": "~0.1.7",
+    "grunt-contrib-jshint": "~0.4.3",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-jade": "~0.9.1"
+  },
+  "scripts": {
+    "test": "grunt travis --verbose"
+  }
+}

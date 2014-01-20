@@ -1,0 +1,35 @@
+{
+  "name": "hexagonize",
+  "title": "jQuery Hexagonize",
+  "description": "make hexagon shape.",
+  "keywords": [
+    "jquery",
+    "hexagon"
+  ],
+  "version": "0.0.1",
+  "author": {
+    "name": "pchw",
+    "email": "bump.luv@gmail.com",
+    "url": "https://github.com/pchw"
+  },
+  "maintainers": [
+    {
+      "name": "pchw",
+      "email": "bump.luv@gmail.com",
+      "url": "https://github.com/pchw"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://zenorocha.mit-license.org/"
+    }
+  ],
+  "bugs": "https://github.com/jquery-hexagonize/issues",
+  "homepage": "http://jquery-hexagonize.github.io",
+  "docs": "https://github.com/jquery-hexagonize#readme",
+  "download": "https://github.com/jquery-hexagonize/archive/master.zip",
+  "dependencies": {
+    "jquery": ">=1.4"
+  }
+}
