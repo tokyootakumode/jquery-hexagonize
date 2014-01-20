@@ -1,7 +1,7 @@
 /*
  *  jQuery Hexagonize - v0.0.1
  *  make hexagon shape.
- *  http://jquery-hexagonize.github.io
+ *  https://github.com/tokyootakumode/jquery-hexagonize
  *
  *  Made by pchw
  *  Under MIT License
