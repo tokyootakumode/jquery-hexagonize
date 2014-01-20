@@ -3,7 +3,7 @@
   "title": "jQuery Hexagonize",
   "description": "make hexagon shape",
   "author": "pchw",
-  "homepage": "https://github.com/jquery-hexagonize",
+  "homepage": "https://github.com/tokyootakumode/jquery-hexagonize",
   "version": "0.0.1",
   "devDependencies": {
     "grunt": "~0.4.2",

@@ -25,10 +25,10 @@
       "url": "http://zenorocha.mit-license.org/"
     }
   ],
-  "bugs": "https://github.com/jquery-hexagonize/issues",
-  "homepage": "http://jquery-hexagonize.github.io",
-  "docs": "https://github.com/jquery-hexagonize#readme",
-  "download": "https://github.com/jquery-hexagonize/archive/master.zip",
+  "bugs": "https://github.com/tokyootakumode/jquery-hexagonize/issues",
+  "homepage": "https://github.com/tokyootakumode/jquery-hexagonize",
+  "docs": "https://github.com/tokyootakumode/jquery-hexagonize#readme",
+  "download": "https://github.com/tokyootakumode/jquery-hexagonize/archive/master.zip",
   "dependencies": {
     "jquery": ">=1.4"
   }
