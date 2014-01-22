@@ -5,14 +5,17 @@ Code Example
 ----
 ```
 body
-  .element(
-    data-img-url="http://placekitten.com/300/300"
-    data-img-hover-url="http://placekitten.com/301/301")
+  .wrapper
+    .element(
+      data-img-url="http://placekitten.com/300/300"
+      data-img-hover-url="http://placekitten.com/301/301")
   script(type="text/javascript").
     $(function(){
       $('.element').hexagonize({
         width: 118,
-        height: 118*1.5
+        height: 118*1.5,
+        hover_target: $('.wrappper'),
+        margin_top_offset: -10
       });
     });
 ```

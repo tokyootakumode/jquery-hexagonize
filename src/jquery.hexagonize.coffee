@@ -12,6 +12,8 @@ do ($ = jQuery) ->
   defaults =
     width: 200
     height: 400
+    margin_top_offset: 0
+    hover_target: null
 
   # The actual plugin constructor
   class Plugin
@@ -35,12 +37,12 @@ do ($ = jQuery) ->
     applyHexagon: ->
       img_url = @$element.data("img-url")  unless img_url
       hover_url = @$element.data("img-hover-url")  unless hover_url
+      
       @$element.css
         width: @options.width
         height: @options.height
-        marginTop: "-#{@options.height*0.2}px"
+        marginTop: @options.margin_top_offset || -@options.height*0.2
         overflow: "hidden"
-        visibility: "hidden"
         cursor: "pointer"
         "-webkit-transform": "rotate(120deg)"
         "-moz-transform": "rotate(120deg)"
@@ -59,23 +61,55 @@ do ($ = jQuery) ->
 
       $grand = $("<div/>")
       $grand.css
+        position: "relative"
+        top: "-200%"
+        overflow: "hidden"
         width: "100%"
         height: "100%"
         backgroundRepeat: "no-repeat"
         backgroundPosition: "50%"
         backgroundImage: "url(#{img_url})"
-        visibility: "visible"
         "-webkit-transform": "rotate(-60deg)"
         "-moz-transform": "rotate(-60deg)"
         "-o-transform": "rotate(-60deg)"
         transform: "rotate(-60deg)"
 
-      $grand.hover ->
-        $(this).css "backgroundImage", "url(#{hover_url})"
+      $cover = $("<div/>")
+      $cover.css
+        position: "relative"
+        top: "-100%"
+        overflow: "hidden"
+        width: "100%"
+        height: "100%"
+        backgroundColor: "rgba(255,255,255,0.5)"
+        "-webkit-transform": "rotate(-60deg)"
+        "-moz-transform": "rotate(-60deg)"
+        "-o-transform": "rotate(-60deg)"
+        transform: "rotate(-60deg)"
+
+      $hov = $("<div/>")
+      $hov.css
+        overflow: "hidden"
+        width: "100%"
+        height: "100%"
+        backgroundRepeat: "no-repeat"
+        backgroundPosition: "50%"
+        backgroundImage: "url(#{hover_url})"
+        "-webkit-transform": "rotate(-60deg)"
+        "-moz-transform": "rotate(-60deg)"
+        "-o-transform": "rotate(-60deg)"
+        transform: "rotate(-60deg)"
+
+      $hover_target = $(@options.hover_target) or @$element
+
+      $hover_target.hover ->
+        $grand.stop().fadeOut 250
       , 
         ->
-          $(this).css "backgroundImage", "url(#{img_url})"
-
+          $grand.stop().fadeIn 250
+      
+      $child.append $hov
+      $child.append $cover
       $child.append $grand
       @$element.append $child
 
