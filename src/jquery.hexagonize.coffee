@@ -103,10 +103,10 @@ do ($ = jQuery) ->
       $hover_target = $(@options.hover_target) or @$element
 
       $hover_target.hover ->
-        $grand.stop().fadeOut 250
+        $grand.stop(true, true).fadeOut 250
       , 
         ->
-          $grand.stop().fadeIn 250
+          $grand.stop(true, true).fadeIn 250
       
       $child.append $hov
       $child.append $cover

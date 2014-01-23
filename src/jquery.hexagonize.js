@@ -94,9 +94,9 @@
         });
         $hover_target = $(this.options.hover_target) || this.$element;
         $hover_target.hover(function() {
-          return $grand.stop().fadeOut(250);
+          return $grand.stop(true, true).fadeOut(250);
         }, function() {
-          return $grand.stop().fadeIn(250);
+          return $grand.stop(true, true).fadeIn(250);
         });
         $child.append($hov);
         $child.append($cover);
